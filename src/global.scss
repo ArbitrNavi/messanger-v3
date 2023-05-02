@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #313131;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.selectChat {
+  width: calc(100% - 50%);
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #222222;
+  box-shadow: 2px 2px 19px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.notFound {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+
+  p {
+    font-size: 100px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.formBlock {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+
+  >button {
+    padding: 5px 15px;
+  }
+
+
+  .formWrap {
+    width: 350px;
+    padding: 10px;
+    background: #202020;
+    box-shadow: 0 2px 19px rgba(0, 0, 0, 0.25);
+
+    h1 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid #fff;
+      font-size: 18px;
+      outline: none;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 5px 20px;
+      background-color: #202020;
+      border: 1px solid #fff;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      transition: .3s ;
+
+      &:hover {
+        background-color: white;
+        color: #000;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

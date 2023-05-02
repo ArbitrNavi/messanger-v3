@@ -1,0 +1,20 @@
+.chats {
+  padding: 15px;
+  height: calc(100% - 118px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    border-radius: 20px;       /* закругления плашки */
+    width: 5px;               /* ширина scrollbar */
+  }
+  &::-webkit-scrollbar-track {
+    background: #464646;        /* цвет дорожки */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffffff;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+  }
+
+  ul {
+    list-style: none;
+  }
+}
