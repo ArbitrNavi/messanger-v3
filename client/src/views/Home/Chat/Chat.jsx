@@ -13,6 +13,7 @@ const Chat = ({id}) => {
         })[0]
     })
 
+
     return (
         <div className={s.chat}>
             <Messages messages={messages}/>

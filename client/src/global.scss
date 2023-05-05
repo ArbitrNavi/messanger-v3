@@ -27,6 +27,16 @@ a {
   padding: 1%;
 }
 
+.errorBlock {
+  padding: 5px;
+  background-color: red;
+  border-radius: 10px;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
 .notFound {
   height: 100vh;
   display: flex;

@@ -18,7 +18,7 @@ const Login = () => {
                     </button>
                 </form>
                 <p>
-                    Не зарегестрированны? <br /> <Link to={``}>Регистрация</Link>
+                    Не зарегестрированны? <br /> <Link to={`/register`}>Регистрация</Link>
                 </p>
             </div>
         </div>

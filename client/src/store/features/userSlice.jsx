@@ -6,17 +6,17 @@ export const userSlice = createSlice({
         user: {
             id: 1
         },
-        token: true,
+        token: localStorage.getItem("ACCESS_TOKEN"),
     },
     reducers: {
         setUser: (state, action) => {
-
+            state.user = action.payload;
         },
         setToken: (state, action) => {
-
-        }
+            localStorage.setItem("ACCESS_TOKEN", action.payload);
+        },
     }
 })
 
-export const {} = userSlice.actions;
+export const {setUser, setToken} = userSlice.actions;
 export default userSlice.reducer;
