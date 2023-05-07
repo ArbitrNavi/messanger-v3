@@ -31,18 +31,22 @@ class AuthController extends Controller
     public function signup(SignupRequest $request)
     {
         $data = $request->validated();
+        $filename = $request->file('avatar')->store('avatars');
+
         /** @var \App\Models\User $user */
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'avatar' => $filename
         ]);
 
         $token = $user->createToken('main')->plainTextToken;
 
         return response([
             'user' => $user,
-            'token' => $token
+            'token' => $token,
+            'data' => $request,
         ]);
     }
 

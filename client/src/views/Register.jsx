@@ -10,22 +10,30 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [password_confirmation, setPasswordConfirm] = useState("");
+    const [file, setFile] = useState();
     const [errors, setErrors] = useState(null);
+
     const dispatcher = useDispatch();
+    const data = new FormData();
+
 
     const onSubmit = (e) => {
         e.preventDefault();
-        const payload = {
-            name,
-            email,
-            password,
-            password_confirmation,
-        }
 
-        console.log(payload)
+        data.append('name', name)
+        data.append('email', email)
+        data.append('password', password)
+        data.append('password_confirmation', password_confirmation)
+        data.append('avatar', file)
 
-        axiosClient.post("/signup", payload)
+        axiosClient
+            .post("/signup", data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
             .then(({data}) => {
+                console.log(data)
                 dispatcher(setUser(data.user))
                 dispatcher(setToken(data.token))
                 window.location.reload();
@@ -53,7 +61,7 @@ const Register = () => {
                         </div>
                     )
                 }
-                <form action="" onSubmit={(e) => onSubmit(e)}>
+                <form action="" encType={`multipart/form-data`} onSubmit={(e) => onSubmit(e)}>
                     <input
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -77,6 +85,10 @@ const Register = () => {
                         onChange={(e) => setPasswordConfirm(e.target.value)}
                         type="password"
                         placeholder={`Подтвердите пароль`}
+                    />
+                    <input
+                        type="file"
+                        onChange={(e) => setFile(e.target.files[0])}
                     />
                     <button>
                         Зарегестрироваться
