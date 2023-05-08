@@ -24,7 +24,6 @@ const Login = () => {
             .then(({data}) => {
                 dispatcher(setUser(data.user))
                 dispatcher(setToken(data.token))
-                window.location.reload();
             })
             .catch((err) => {
                 const response = err.response;

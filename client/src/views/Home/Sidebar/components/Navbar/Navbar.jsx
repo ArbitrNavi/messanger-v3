@@ -16,7 +16,6 @@ const Navbar = () => {
             .then(() => {
                 dispatcher(setUser({}));
                 dispatcher(setToken(null))
-                return <Navigate to={`/login`} />
             })
     }
 

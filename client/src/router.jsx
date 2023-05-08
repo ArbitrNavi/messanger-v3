@@ -5,7 +5,6 @@ import Login from "./views/Login.jsx";
 import App from "./views/Home/App.jsx";
 import NotFound from "./views/NotFound.jsx";
 import Register from "./views/Register.jsx";
-import * as path from "path";
 import Chat from "./views/Home/Chat/Chat.jsx";
 
 export const router = createBrowserRouter([

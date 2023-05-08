@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 import axiosClient from "../../axios-client.js";
 import {useDispatch} from "react-redux";
-import {setToken, setUser} from "../store/features/userSlice.jsx";
+import {setToken} from "../store/features/userSlice.jsx";
+import {setUser} from "../store/features/userSlice.jsx";
+
 
 
 const Register = () => {
@@ -12,6 +14,7 @@ const Register = () => {
     const [password_confirmation, setPasswordConfirm] = useState("");
     const [file, setFile] = useState();
     const [errors, setErrors] = useState(null);
+
 
     const dispatcher = useDispatch();
     const data = new FormData();
@@ -36,7 +39,7 @@ const Register = () => {
                 console.log(data)
                 dispatcher(setUser(data.user))
                 dispatcher(setToken(data.token))
-                window.location.reload();
+                return <Navigate to={`/home`} />
             })
             .catch((err) => {
                 const response = err.response;
