@@ -3,7 +3,6 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 export const setUser = createAsyncThunk(
     'user/setUser',
     async (data) => {
-        console.log(data)
         const [response] = await Promise.all([data]);
         return response;
     }

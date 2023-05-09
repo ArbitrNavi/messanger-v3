@@ -24,6 +24,9 @@
       <excludeFolder url="file://$MODULE_DIR$/server/vendor/laravel-lang/lang" />
       <excludeFolder url="file://$MODULE_DIR$/server/vendor/laravel-lang/publisher" />
       <excludeFolder url="file://$MODULE_DIR$/server/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/paragonie/sodium_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/pusher/pusher-php-server" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

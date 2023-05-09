@@ -129,6 +129,9 @@
       <path value="$PROJECT_DIR$/server/vendor/laravel-lang/common" />
       <path value="$PROJECT_DIR$/server/vendor/laravel-lang/attributes" />
       <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/server/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/server/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/server/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

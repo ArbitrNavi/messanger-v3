@@ -61,9 +61,17 @@ export const fetchSlice  = createSlice({
         ],
     },
     reducers: {
-
+        sendMessage: (state, action) => {
+            const message = action.payload
+            console.log(message)
+            state.chats.map(chat => {
+                if (chat.chatID === message.chatID) {
+                    chat.messages.push(message.data)
+                }
+            })
+        }
     }
 })
 
-export const {} = fetchSlice.actions;
+export const {sendMessage} = fetchSlice.actions;
 export default fetchSlice.reducer

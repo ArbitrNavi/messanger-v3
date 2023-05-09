@@ -3,6 +3,7 @@ import s from "./Chat.module.scss";
 import Messages from "./components/Messages/Messages.jsx";
 import Input from "./components/Input/Input.jsx";
 import {useSelector} from "react-redux";
+import message from "./components/Messages/components/Message.jsx";
 
 const Chat = ({id}) => {
     const messages = useSelector((state) => {
@@ -13,6 +14,7 @@ const Chat = ({id}) => {
         })[0]
     })
 
+    console.log(messages)
 
     return (
         <div className={s.chat}>

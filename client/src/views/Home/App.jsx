@@ -17,9 +17,6 @@ const App = () => {
     const dispatcher = useDispatch();
     const [isLoading, setLoading] = useState(true)
 
-    console.log(userData)
-    console.log(localStorage.getItem("ACCESS_TOKEN"))
-
     useEffect(() => {
         axiosClient
             .get("/user")
