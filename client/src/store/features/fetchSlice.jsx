@@ -55,7 +55,7 @@ export const fetchSlice  = createSlice({
                         userId: 3,
                         text: "Не плохо?",
                         time: "12:50",
-                    }
+                    },
                 ]
             }
         ],
